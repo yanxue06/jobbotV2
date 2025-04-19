@@ -32,6 +32,7 @@ const Home = () => {
       </header>
 
       {/* Hero Section */}
+
       <section className="bg-gradient-to-b from-blue-50 to-white dark:from-slate-800 dark:to-slate-900 py-16 px-4 md:py-24">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
@@ -45,6 +46,7 @@ const Home = () => {
                 chances of landing interviews.
               </p>
               <div className="flex flex-wrap gap-4">
+
                 <div className="flex items-center gap-2 bg-white dark:bg-slate-800 px-4 py-2 rounded-full shadow-sm">
                   <Briefcase className="h-5 w-5 text-blue-500" />
                   <span className="text-slate-700 dark:text-slate-200">
@@ -69,7 +71,7 @@ const Home = () => {
               <img
                 src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&q=80"
                 alt="Job application process"
-                className="rounded-lg shadow-md w-full"
+                className="w-full rounded-lg shadow-md"
               />
             </div>
           </div>
@@ -77,9 +79,10 @@ const Home = () => {
       </section>
 
       {/* Main Content */}
-      <section className="py-12 px-4">
-        <div className="container mx-auto max-w-6xl">
+      <section className="px-4 py-12">
+        <div className="container max-w-6xl mx-auto">
           <Card className="border-0 shadow-lg">
+
             <CardHeader className="bg-white dark:bg-slate-800 rounded-t-lg border-b dark:border-slate-700">
               <CardTitle className="text-2xl text-center text-slate-800 dark:text-white">
                 Start Your Analysis
@@ -99,43 +102,48 @@ const Home = () => {
                     value="job-posting"
                     className="flex items-center gap-2"
                   >
-                    <BookOpen className="h-4 w-4" />
+                    <BookOpen className="w-4 h-4" />
                     Analyze Job Posting
                   </TabsTrigger>
                   <TabsTrigger
                     value="resume"
                     className="flex items-center gap-2"
                   >
-                    <FileText className="h-4 w-4" />
+                    <FileText className="w-4 h-4" />
                     Analyze Resume
                   </TabsTrigger>
                 </TabsList>
               </Tabs>
             </CardHeader>
             <CardContent className="p-0">
-              <TabsContent value="job-posting" className="m-0">
-                <JobPostingAnalyzer />
-              </TabsContent>
-              <TabsContent value="resume" className="m-0">
-                <ResumeAnalyzer />
-              </TabsContent>
+              <Tabs> 
+                <TabsContent value="job-posting" className="m-0">
+                  <JobPostingAnalyzer />
+                </TabsContent>
+                <TabsContent value="resume" className="m-0">
+                  <ResumeAnalyzer />
+                </TabsContent>
+              </Tabs>
             </CardContent>
           </Card>
         </div>
       </section>
 
       {/* Mission Statement */}
+
       <section className="bg-blue-50 dark:bg-slate-800 py-12 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-2xl md:text-3xl font-semibold text-slate-800 dark:text-white mb-4">
             Our Nonprofit Mission
           </h2>
           <p className="text-slate-600 dark:text-slate-300 mb-6 max-w-3xl mx-auto">
+
             We believe everyone deserves access to quality job application
             assistance. This tool is completely free and designed to democratize
             access to AI-powered job search tools that would otherwise be
             expensive or inaccessible.
           </p>
+
           <div className="flex justify-center gap-4 flex-wrap">
             <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm max-w-xs">
               <div className="bg-blue-100 dark:bg-blue-900 p-3 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
@@ -149,6 +157,7 @@ const Home = () => {
                 premium tiers.
               </p>
             </div>
+
             <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm max-w-xs">
               <div className="bg-blue-100 dark:bg-blue-900 p-3 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
                 <Briefcase className="h-6 w-6 text-blue-600 dark:text-blue-400" />
@@ -161,6 +170,7 @@ const Home = () => {
                 improve their applications.
               </p>
             </div>
+
             <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm max-w-xs">
               <div className="bg-blue-100 dark:bg-blue-900 p-3 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
                 <FileText className="h-6 w-6 text-blue-600 dark:text-blue-400" />
@@ -178,6 +188,7 @@ const Home = () => {
       </section>
 
       {/* Footer */}
+
       <footer className="bg-slate-800 dark:bg-slate-900 text-white py-8 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -185,11 +196,11 @@ const Home = () => {
               <h2 className="text-xl font-semibold">
                 AI Job Application Assistant
               </h2>
-              <p className="text-slate-300 text-sm">
+              <p className="text-sm text-slate-300">
                 A free, nonprofit service
               </p>
             </div>
-            <div className="text-slate-300 text-sm">
+            <div className="text-sm text-slate-300">
               © {new Date().getFullYear()} AI Job Application Assistant. All
               rights reserved.
             </div>
